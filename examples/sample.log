@@ -1,0 +1,63 @@
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:01Z [Info] Starting Snaffler...
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:02Z [Info] Targeting domain: yourcompany.local
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:05Z [Info] Finding domain controllers...
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:08Z [Info] Found DC: DC01.yourcompany.local
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:10Z [Info] Scanning for accessible shares...
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:15Z [Share] {Green}<\\DC01\SYSVOL>(R) Default share
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:16Z [Share] {Green}<\\DC01\NETLOGON>(R) Logon server share
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:17Z [Share] {Green}<\\FILESERV01\Department$>(R)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:18Z [Share] {Yellow}<\\FILESERV01\IT-Admin$>(RW) IT Admin Share
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:19Z [Share] {Green}<\\FILESERV02\Projects>(R)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:20Z [Share] {Green}<\\WEBSERV01\wwwroot$>(R)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:21Z [Share] {Yellow}<\\DEVSERV01\builds$>(RW) Build artifacts
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:22Z [Share] {Green}<\\SQLSERV01\backups$>(R) SQL Backups
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:30Z [Dir] {Green}(\\DC01\SYSVOL\yourcompany.local\Policies)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:31Z [Dir] {Green}(\\FILESERV01\Department$\Finance)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:32Z [Dir] {Green}(\\FILESERV01\Department$\HR)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:01Z [File] {Black}<KeepExtExactBlack|R||14.2 KB|2024-11-15 03:22:10Z>(\\FILESERV01\IT-Admin$\credentials\master.kdbx)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:03Z [File] {Black}<KeepExtExactBlack|R||3.2 KB|2024-08-20 14:05:33Z>(\\DEVSERV01\builds$\deploy-scripts\id_rsa)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:05Z [File] {Black}<KeepExtExactBlack|R||1.7 KB|2025-01-10 09:41:00Z>(\\DEVSERV01\builds$\deploy-scripts\id_rsa.pub)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:07Z [File] {Black}<KeepNameExactBlack|R||0.8 KB|2024-12-01 11:30:00Z>(\\FILESERV02\Projects\infra\ansible\.vault-pass)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:10Z [File] {Black}<KeepExtExactBlack|R||22.5 KB|2024-06-15 07:00:00Z>(\\SQLSERV01\backups$\certs\sqlserver.pfx)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:12Z [File] {Black}<KeepExtExactBlack|R||4.1 KB|2023-09-01 16:20:00Z>(\\FILESERV01\IT-Admin$\vpn\client.p12)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:15Z [File] {Black}<KeepNameExactBlack|R||0.3 KB|2025-02-28 08:15:00Z>(\\DEVSERV01\builds$\microservices\auth-svc\.env)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:17Z [File] {Black}<KeepNameExactBlack|R||0.5 KB|2025-01-20 13:00:00Z>(\\DEVSERV01\builds$\microservices\payment-svc\.env)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:20Z [File] {Red}<KeepConfigRegexRed|R||2.1 KB|2025-02-10 10:30:00Z>(\\WEBSERV01\wwwroot$\intranet\web.config) password=Exampl3P@ss!
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:22Z [File] {Red}<KeepConfigRegexRed|R||1.8 KB|2024-11-30 15:45:00Z>(\\WEBSERV01\wwwroot$\portal\web.config) connectionString="Server=SQLSERV01;Database=PortalDB;User=sa;Password=SQLp@ss99"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:25Z [File] {Red}<KeepConfigRegexRed|R||3.4 KB|2025-01-05 09:00:00Z>(\\WEBSERV01\wwwroot$\api\appsettings.json) "ConnectionString": "Server=SQLSERV01;Password=Pr0dP@ss!"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:27Z [File] {Red}<KeepScriptRegexRed|R||1.2 KB|2024-10-12 08:30:00Z>(\\FILESERV01\IT-Admin$\scripts\backup.ps1) $password = "B@ckup2024!"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:30Z [File] {Red}<KeepScriptRegexRed|R||0.9 KB|2025-03-01 07:00:00Z>(\\FILESERV01\IT-Admin$\scripts\deploy.bat) set DB_PASS=d3pl0y_s3cret
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:32Z [File] {Red}<KeepScriptRegexRed|R||2.5 KB|2024-07-20 12:00:00Z>(\\DEVSERV01\builds$\ci-cd\jenkins-deploy.py) api_key = "sk-example-xxxxxxxxxxxxx"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:35Z [File] {Red}<KeepConfigRegexRed|R||0.6 KB|2025-02-15 14:20:00Z>(\\DEVSERV01\builds$\microservices\auth-svc\config.yml) jwt_secret: "sup3r_s3cret_jwt_k3y"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:37Z [File] {Red}<KeepCertExportableRed|R||5.8 KB|2024-04-01 10:00:00Z>(\\FILESERV01\IT-Admin$\certs\wildcard-yourcompany.pfx) Exportable private key
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:40Z [File] {Red}<KeepConfigRegexRed|R||1.1 KB|2025-01-25 16:00:00Z>(\\FILESERV02\Projects\infra\terraform\main.tf) access_key = "AKIAIOSFODNN7EXAMPLE"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:42Z [File] {Red}<KeepConfigRegexRed|R||0.7 KB|2025-02-20 09:30:00Z>(\\FILESERV02\Projects\infra\terraform\secrets.tfvars) aws_secret_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:01Z [File] {Yellow}<KeepExtExactYellow|R||8.3 KB|2024-09-10 11:00:00Z>(\\FILESERV01\IT-Admin$\certs\internal-ca.key)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:03Z [File] {Yellow}<KeepExtExactYellow|R||12.7 KB|2024-05-22 13:15:00Z>(\\SQLSERV01\backups$\certs\sqlserver.jks)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:05Z [File] {Yellow}<KeepExtExactYellow|R||6.4 KB|2024-11-01 08:45:00Z>(\\FILESERV01\IT-Admin$\vpn\openvpn.key)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:07Z [File] {Yellow}<KeepExtExactYellow|R||2.2 KB|2025-02-01 07:30:00Z>(\\DEVSERV01\builds$\ssl\server.pem)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:10Z [File] {Yellow}<KeepConfigRegexYellow|R||4.5 KB|2024-08-15 10:00:00Z>(\\FILESERV02\Projects\legacy-app\database.yml) host: sqlserv01.yourcompany.local
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:12Z [File] {Yellow}<KeepConfigRegexYellow|R||1.9 KB|2025-01-30 12:00:00Z>(\\WEBSERV01\wwwroot$\old-site\wp-config.php) define('DB_PASSWORD', 'wp_admin_2024');
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:15Z [File] {Yellow}<KeepExtExactYellow|R||156 KB|2024-03-10 09:00:00Z>(\\FILESERV01\Department$\Finance\payroll\salaries-2024.xlsx)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:17Z [File] {Yellow}<KeepNameContainsYellow|R||89 KB|2024-12-15 14:30:00Z>(\\FILESERV01\Department$\HR\employees\password-reset-list.xlsx)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:20Z [File] {Yellow}<KeepNameContainsYellow|R||45 KB|2025-02-05 11:00:00Z>(\\FILESERV01\Department$\IT\network-credentials.docx)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:02:22Z [File] {Yellow}<KeepExtExactYellow|R||3.1 KB|2024-10-01 16:00:00Z>(\\DEVSERV01\builds$\docker\registry.htpasswd)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:01Z [File] {Green}<KeepExtExactGreen|R||5.4 KB|2025-01-15 08:00:00Z>(\\FILESERV02\Projects\webapp\src\config\settings.ini)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:03Z [File] {Green}<KeepExtExactGreen|R||2.8 KB|2024-11-20 10:30:00Z>(\\WEBSERV01\wwwroot$\intranet\Global.asax)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:05Z [File] {Green}<KeepExtExactGreen|R||7.2 KB|2025-02-25 09:15:00Z>(\\DEVSERV01\builds$\microservices\gateway\Dockerfile)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:07Z [File] {Green}<KeepExtExactGreen|R||1.6 KB|2024-09-30 14:00:00Z>(\\FILESERV02\Projects\infra\ansible\inventory.yml)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:09Z [File] {Green}<KeepExtExactGreen|R||4.3 KB|2024-12-20 11:45:00Z>(\\FILESERV02\Projects\infra\k8s\deployment.yaml)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:11Z [File] {Green}<KeepExtExactGreen|R||0.9 KB|2025-03-05 07:30:00Z>(\\DEVSERV01\builds$\scripts\Makefile)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:13Z [File] {Green}<KeepExtExactGreen|R||3.5 KB|2024-07-15 13:00:00Z>(\\FILESERV01\IT-Admin$\monitoring\prometheus.yml)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:15Z [File] {Green}<KeepExtExactGreen|R||11.2 KB|2025-01-08 10:00:00Z>(\\FILESERV02\Projects\webapp\docker-compose.yml)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:17Z [File] {Green}<KeepExtExactGreen|R||2.1 KB|2024-10-25 08:30:00Z>(\\WEBSERV01\wwwroot$\api\Startup.cs)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:19Z [File] {Green}<KeepExtExactGreen|R||6.7 KB|2025-02-12 15:00:00Z>(\\DEVSERV01\builds$\ci-cd\Jenkinsfile)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:21Z [File] {Green}<KeepExtExactGreen|R||1.3 KB|2024-08-05 09:45:00Z>(\\FILESERV02\Projects\legacy-app\Vagrantfile)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:23Z [File] {Green}<KeepExtExactGreen|R||4.8 KB|2025-01-22 12:30:00Z>(\\FILESERV01\IT-Admin$\scripts\audit-users.ps1)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:25Z [File] {Green}<KeepNameContainsGreen|R||0.4 KB|2024-11-10 16:15:00Z>(\\DEVSERV01\builds$\microservices\auth-svc\.gitignore)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:27Z [File] {Green}<KeepExtExactGreen|R||8.9 KB|2025-03-08 08:00:00Z>(\\FILESERV02\Projects\webapp\package.json)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:30Z [Error] Error accessing \\FILESERV03\restricted$: Access denied
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:31Z [Error] Error accessing \\SQLSERV01\admin$: Access denied
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:35Z [Info] Completed share enumeration. 8 shares accessible.
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:40Z [Info] File classification complete. 46 results.
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:03:41Z [Info] Snaffler out.

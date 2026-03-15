@@ -1,0 +1,8 @@
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:01Z [Info] Starting Snaffler...
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:02Z [Info] Targeting domain: yourcompany.local
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:15Z [Share] {Green}<\\DC01\SYSVOL>(R) Default share
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:00:18Z [Share] {Yellow}<\\FILESERV01\IT-Admin$>(RW) IT Admin Share
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:01Z [File] {Black}<KeepExtExactBlack|R||14.2 KB|2024-11-15 03:22:10Z>(\\FILESERV01\IT-Admin$\credentials\master.kdbx)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:03Z [File] {Black}<KeepExtExactBlack|R||3.2 KB|2024-08-20 14:05:33Z>(\\DEVSERV01\builds$\deploy-scripts\id_rsa)
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:20Z [File] {Red}<KeepConfigRegexRed|R||2.1 KB|2025-02-10 10:30:00Z>(\\WEBSERV01\wwwroot$\intranet\web.config) password=Exampl3P@ss!
+[YOURCOMPANY\svc-scanner@DC01] 2025-03-10 08:01:22Z [Error] Unhandled exception in file scanner thread
