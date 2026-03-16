@@ -71,6 +71,11 @@ body {
   transition: background 0.15s;
 }
 .drop-box .browse-btn:hover { background: var(--accent-hover) }
+.github-link {
+  margin-top: 24px; font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--ink-tertiary); text-decoration: none; transition: color 0.15s;
+}
+.github-link:hover { color: var(--accent) }
 
 /* ── PROGRESS ── */
 .parse-progress { margin-top: 24px; width: 320px }

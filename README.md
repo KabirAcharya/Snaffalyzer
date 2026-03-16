@@ -28,6 +28,20 @@ bun run dev       # development server
 bun run build     # production build → dist/
 ```
 
+## CLI report generation
+
+`generate-report.sh` can generate standalone HTML reports from the command line without opening a browser.
+
+```sh
+# Encrypted (prompts for password)
+./generate-report.sh scan-results.log
+
+# Unencrypted
+./generate-report.sh --no-encrypt scan-results.log output.html
+```
+
+Requires Python 3 and `pip install cryptography` for encrypted reports.
+
 ## Deploy
 
 ```sh

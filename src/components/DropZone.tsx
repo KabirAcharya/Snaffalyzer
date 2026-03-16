@@ -70,6 +70,7 @@ export function DropZone({ onFile, parsing, progress }: DropZoneProps) {
           }}
         />
       </div>
+      <a href="https://github.com/KabirAcharya/Snaffalyzer" target="_blank" rel="noopener noreferrer" className="github-link">GitHub</a>
       {parsing && (
         <div className="parse-progress">
           <div className="bar-track">
