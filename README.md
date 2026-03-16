@@ -17,7 +17,7 @@ A parser and triage dashboard for [Snaffler](https://github.com/SnaffCon/Snaffle
 - **Export** to CSV, copy to clipboard
 - **Save Report** as a self-contained HTML file (encrypted or unencrypted)
   - AES-256-GCM encryption with PBKDF2-SHA256 key derivation (600,000 rounds)
-  - Report data stored as base64 in HTML data attributes — zero script injection
+  - Report data stored as base64 in HTML data attributes with zero script injection
 - **Fully offline** — fonts, Chart.js, and all assets bundled into a single HTML file
 
 ## Quick start
