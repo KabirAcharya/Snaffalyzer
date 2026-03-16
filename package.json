@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "bun run build && wrangler dev",
+    "deploy": "bun run build && wrangler deploy"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -19,9 +20,11 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@cloudflare/vite-plugin": "^1.28.0",
     "chart.js": "^4.5.1",
     "react": "^19.2.4",
     "react-chartjs-2": "^5.3.1",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "wrangler": "^4.73.0"
   }
 }
